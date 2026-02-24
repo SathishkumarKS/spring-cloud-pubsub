@@ -1,0 +1,7 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  cloud:
+    stream:
+      default-binder: pubsub

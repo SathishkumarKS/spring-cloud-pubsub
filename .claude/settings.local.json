@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "WebSearch",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:java.testcontainers.org)",
+      "Bash(./gradlew test:*)",
+      "Bash(./gradlew build:*)",
+      "Bash(grep spring-boot:*)",
+      "Bash(grep spring-test:*)",
+      "Bash(xargs -I{} jar tf {})"
     ]
   }
 }
