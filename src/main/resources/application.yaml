@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-cloud-pubsub
+  cloud:
+    stream:
+      bindings:
+        hello-out-0:
+          destination: hello-topic
+      binders:
+        pubsub:
+          type: pubsub
+      default-binder: pubsub
+    gcp:
+      project-id: ${GCP_PROJECT_ID:hello-world}
+      pubsub:
+        enabled: true
+        emulator-host: localhost:8085
