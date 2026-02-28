@@ -1,0 +1,27 @@
+{
+  "http-request": {
+    "path": "/api/orders",
+    "method": "GET",
+    "description": "This is an example of a request to retrieve a specific entity at the /api/orders endpoint"
+  },
+  "http-response": {
+    "status": 200,
+    "body": [
+      {
+        "id": "c12b0542-28f1-4195-bb91-21f1f9d2339f",
+        "customerName": "Boyer",
+        "product": "Fantastic Silk Computer",
+        "quantity": 782,
+        "price": 447.0,
+        "status": "CREATED",
+        "createdAt": "2026-02-28T17:23:36Z",
+        "updatedAt": "2026-02-28T17:23:36Z"
+      }
+    ],
+    "status-text": "OK",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response "
+  }
+}

@@ -1,0 +1,48 @@
+version: 3
+systemUnderTest:
+  service:
+    $ref: "#/components/services/orderApi"
+    runOptions:
+      $ref: "#/components/runOptions/orderApiTest"
+
+dependencies:
+  services:
+    - service:
+        $ref: "#/components/services/pubsubMessaging"
+        runOptions:
+          $ref: "#/components/runOptions/pubsubMock"
+components:
+  sources:
+    localContracts:
+      filesystem:
+        directory: ./spec
+  services:
+    orderApi:
+      definitions:
+        - definition:
+            source:
+              $ref: "#/components/sources/localContracts"
+            specs:
+              - spec:
+                  path: "openapi.yaml"
+    pubsubMessaging:
+      definitions:
+        - definition:
+            source:
+              $ref: "#/components/sources/localContracts"
+            specs:
+              - spec:
+                  id: asyncApiSpec
+                  path: "asyncapi.yaml"
+  runOptions:
+    orderApiTest:
+      openapi:
+        type: test
+        baseUrl: http://localhost:8080
+        actuatorUrl: http://localhost:8080/actuator/mappings
+    pubsubMock:
+      asyncapi:
+        type: mock
+        servers:
+          - host: localhost:8085
+            protocol: googlepubsub

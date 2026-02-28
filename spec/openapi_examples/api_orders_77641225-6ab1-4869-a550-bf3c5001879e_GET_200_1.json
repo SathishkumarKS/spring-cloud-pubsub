@@ -1,0 +1,25 @@
+{
+  "http-request": {
+    "path": "/api/orders/a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "method": "GET",
+    "description": "This is an example of a request to retrieve a specific entity at the /api/orders/77641225-6ab1-4869-a550-bf3c5001879e endpoint"
+  },
+  "http-response": {
+    "status": 200,
+    "body": {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "customerName": "Gaylord",
+      "product": "Sleek Plastic Bottle",
+      "quantity": 908,
+      "price": 421.0,
+      "status": "CREATED",
+      "createdAt": "2026-02-28T17:23:37Z",
+      "updatedAt": "2026-02-28T17:23:37Z"
+    },
+    "status-text": "OK",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response "
+  }
+}

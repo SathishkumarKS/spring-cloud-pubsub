@@ -1,0 +1,70 @@
+asyncapi: 2.6.0
+info:
+  title: Order Events Service
+  version: 1.0.0
+  description: Publishes order events to Google Cloud Pub/Sub when orders are created
+
+servers:
+  pubsubEmulator:
+    url: localhost:8085
+    protocol: googlepubsub
+    description: Google Cloud Pub/Sub emulator for local development
+
+channels:
+  order-events:
+    publish:
+      operationId: publishOrderReceivedEvent
+      summary: Publish an OrderReceivedEvent when a new order is created
+      message:
+        $ref: '#/components/messages/OrderReceivedEvent'
+    servers:
+      - pubsubEmulator
+
+components:
+  messages:
+    OrderReceivedEvent:
+      name: OrderReceivedEvent
+      contentType: application/json
+      payload:
+        $ref: '#/components/schemas/OrderReceivedEvent'
+      examples:
+        - name: NEW_ORDER_EVENT
+          payload:
+            orderId: "550e8400-e29b-41d4-a716-446655440000"
+            customerName: "John Doe"
+            product: "Widget"
+            quantity: 2
+            price: 29.99
+            timestamp: "2026-02-28T10:00:00Z"
+
+  schemas:
+    OrderReceivedEvent:
+      type: object
+      required:
+        - orderId
+        - customerName
+        - product
+        - quantity
+        - price
+        - timestamp
+      properties:
+        orderId:
+          type: string
+          format: uuid
+          description: Unique identifier of the order
+        customerName:
+          type: string
+          description: Name of the customer
+        product:
+          type: string
+          description: Product name
+        quantity:
+          type: integer
+          description: Quantity ordered
+        price:
+          type: number
+          description: Price of the order
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp when the event was created

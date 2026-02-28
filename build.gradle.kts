@@ -1,7 +1,7 @@
 plugins {
-	kotlin("jvm") version "1.9.25"
-	kotlin("plugin.spring") version "1.9.25"
-	kotlin("plugin.jpa") version "1.9.25"
+	kotlin("jvm") version "2.3.10"
+	kotlin("plugin.spring") version "2.3.10"
+	kotlin("plugin.jpa") version "2.3.10"
 	id("org.springframework.boot") version "3.5.11"
 	id("io.spring.dependency-management") version "1.1.7"
 }
@@ -18,6 +18,10 @@ java {
 
 repositories {
 	mavenCentral()
+	maven {
+		name = "specmaticReleases"
+		url = uri("https://repo.specmatic.io/releases")
+	}
 }
 
 extra["springCloudVersion"] = "2025.0.1"
@@ -30,6 +34,9 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	implementation("org.springframework.cloud:spring-cloud-stream")
 	implementation("com.google.cloud:spring-cloud-gcp-pubsub-stream-binder")
+	testImplementation("io.specmatic.googlepubsub:specmatic-google-pubsub:1.6.1") {
+		exclude(group = "org.slf4j", module = "slf4j-nop")
+	}
 	testImplementation("org.mockito.kotlin:mockito-kotlin:5.4.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
@@ -38,6 +45,7 @@ dependencies {
 	testImplementation("org.testcontainers:gcloud")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+	testImplementation("io.specmatic.enterprise:executable:1.4.0")
 }
 
 dependencyManagement {
@@ -56,4 +64,6 @@ kotlin {
 tasks.withType<Test> {
 	useJUnitPlatform()
 	jvmArgs("-XX:+EnableDynamicAgentLoading")
+	environment("PUBSUB_EMULATOR_HOST", "localhost:8085")
+	testLogging.showStandardStreams = true
 }

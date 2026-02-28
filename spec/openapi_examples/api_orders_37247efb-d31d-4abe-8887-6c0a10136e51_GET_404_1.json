@@ -1,0 +1,20 @@
+{
+  "http-request": {
+    "path": "/api/orders/37247efb-d31d-4abe-8887-6c0a10136e51",
+    "method": "GET",
+    "description": "This is an example of a request to retrieve a specific entity at the /api/orders/37247efb-d31d-4abe-8887-6c0a10136e51 endpoint"
+  },
+  "http-response": {
+    "status": 404,
+    "body": {
+      "error": "Proxy Authentication Required",
+      "message": "molestiae",
+      "timestamp": "2026-02-28T17:23:40Z"
+    },
+    "status-text": "Not Found",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response "
+  }
+}

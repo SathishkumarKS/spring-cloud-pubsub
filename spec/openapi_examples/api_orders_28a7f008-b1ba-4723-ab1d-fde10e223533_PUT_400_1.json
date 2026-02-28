@@ -1,0 +1,33 @@
+{
+  "http-request": {
+    "path": "/api/orders/28a7f008-b1ba-4723-ab1d-fde10e223533",
+    "method": "PUT",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "customerName": null,
+      "product": "SEABP",
+      "quantity": 84,
+      "price": 263144.389849028,
+      "status": "CREATED"
+    },
+    "description": "This is an example of a bad request for PUT /api/orders/28a7f008-b1ba-4723-ab1d-fde10e223533 endpoint | Mutation: [REQUEST.BODY (contains all the keys AND the key customerName is mutated from string to null AND quantity is set to a value within the specified bounds AND price is set to a value within the specified bounds AND status is set to 'CREATED' from enum)]"
+  },
+  "http-response": {
+    "status": 400,
+    "body": {
+      "error": "Call/Transaction Does Not Exist",
+      "message": "labore",
+      "errors": [
+        "laboriosam"
+      ],
+      "timestamp": "2026-02-28T17:57:11Z"
+    },
+    "status-text": "Bad Request",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response for a bad request sent to PUT /api/orders/28a7f008-b1ba-4723-ab1d-fde10e223533 endpoint"
+  }
+}

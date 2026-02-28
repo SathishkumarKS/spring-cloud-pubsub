@@ -1,0 +1,20 @@
+{
+  "http-request": {
+    "path": "/api/orders/d7d9c208-b215-4fe0-9531-1f7222e6e01e",
+    "method": "DELETE",
+    "description": "This is an example of a request to delete an entity at the /api/orders/d7d9c208-b215-4fe0-9531-1f7222e6e01e endpoint"
+  },
+  "http-response": {
+    "status": 404,
+    "body": {
+      "error": "Proxy Authentication Required",
+      "message": "explicabo",
+      "timestamp": "2026-02-28T17:57:15Z"
+    },
+    "status-text": "Not Found",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response confirming deletion of an entity at the /api/orders/d7d9c208-b215-4fe0-9531-1f7222e6e01e endpoint"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "http-request": {
+        "path": "/api/orders",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "body": {
+            "customerName": null,
+            "product": "ESOOX",
+            "quantity": 3580,
+            "price": 825960.8090042846
+        },
+        "description": "This is an example of a bad request for POST /api/orders endpoint | Mutation: [REQUEST.BODY (contains all the keys AND the key customerName is mutated from string to null AND quantity is set to a value within the specified bounds AND price is set to a value within the specified bounds)]"
+    },
+    "http-response": {
+        "status": 400,
+        "body": {
+            "error": "Request Terminated",
+            "message": "beatae",
+            "errors": [
+                "fugit",
+                "veritatis"
+            ],
+            "timestamp": "2026-02-28T17:23:31Z"
+        },
+        "status-text": "Bad Request",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "description": "This is an example of a response for a bad request sent to POST /api/orders endpoint"
+    }
+}

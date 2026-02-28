@@ -1,0 +1,35 @@
+{
+  "http-request": {
+    "path": "/api/orders/a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "method": "PUT",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "customerName": "Harvey",
+      "product": "Heavy Duty Bronze Keyboard",
+      "quantity": 8582,
+      "price": 646477.1592667154,
+      "status": "CREATED"
+    },
+    "description": "This is an example of a request to update an existing entity at the /api/orders/0ae406ab-ef8c-4e8f-8ecf-123e064d3db0 endpoint "
+  },
+  "http-response": {
+    "status": 200,
+    "body": {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "customerName": "Blick",
+      "product": "Fantastic Marble Car",
+      "quantity": 306,
+      "price": 279.0,
+      "status": "CREATED",
+      "createdAt": "2026-02-28T17:57:09Z",
+      "updatedAt": "2026-02-28T17:57:09Z"
+    },
+    "status-text": "OK",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response after updating an existing entity at the /api/orders/0ae406ab-ef8c-4e8f-8ecf-123e064d3db0 endpoint "
+  }
+}

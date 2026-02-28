@@ -1,0 +1,30 @@
+{
+  "http-request": {
+    "path": "/api/orders/5cd58751-b9eb-4abd-8849-5721c8b40834",
+    "method": "PUT",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "customerName": "Koch",
+      "product": "Mediocre Bronze Shirt",
+      "quantity": 7741,
+      "price": 114808.41645822806,
+      "status": "CREATED"
+    },
+    "description": "This is an example of a request to update an existing entity at the /api/orders/5cd58751-b9eb-4abd-8849-5721c8b40834 endpoint "
+  },
+  "http-response": {
+    "status": 404,
+    "body": {
+      "error": "Bad Request",
+      "message": "voluptatem",
+      "timestamp": "2026-02-28T17:57:12Z"
+    },
+    "status-text": "Not Found",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response after updating an existing entity at the /api/orders/5cd58751-b9eb-4abd-8849-5721c8b40834 endpoint "
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "http-request": {
+    "path": "/api/orders/AQSOS",
+    "method": "GET",
+    "description": "This is an example of a bad request for GET /api/orders/AQSOS endpoint | Mutation: [REQUEST.PARAMETERS.PATH.id (is mutated from uuid to string)]"
+  },
+  "http-response": {
+    "status": 400,
+    "body": {
+      "error": "Busy Here",
+      "message": "excepturi",
+      "timestamp": "2026-02-28T17:23:39Z"
+    },
+    "status-text": "Bad Request",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response for a bad request sent to GET /api/orders/AQSOS endpoint"
+  }
+}

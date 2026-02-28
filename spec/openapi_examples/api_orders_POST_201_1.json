@@ -1,0 +1,34 @@
+{
+  "http-request": {
+    "path": "/api/orders",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "customerName": "Reichel",
+      "product": "Aerodynamic Silk Watch",
+      "quantity": 8177,
+      "price": 283979.0264603463
+    },
+    "description": "This is an example of a request to create a new entity at the /api/orders endpoint "
+  },
+  "http-response": {
+    "status": 201,
+    "body": {
+      "id": "9650cddb-3f5d-46a5-aafa-4a2bd99b03e5",
+      "customerName": "Nader",
+      "product": "Lightweight Steel Pants",
+      "quantity": 877,
+      "price": 541.0,
+      "status": "CREATED",
+      "createdAt": "2026-02-28T17:23:21Z",
+      "updatedAt": "2026-02-28T17:23:21Z"
+    },
+    "status-text": "Created",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "description": "This is an example of a response after creating a new entity at the /api/orders endpoint "
+  }
+}

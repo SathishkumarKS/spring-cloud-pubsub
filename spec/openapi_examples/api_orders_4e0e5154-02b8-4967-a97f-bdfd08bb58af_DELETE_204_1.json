@@ -1,0 +1,12 @@
+{
+  "http-request": {
+    "path": "/api/orders/b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "method": "DELETE",
+    "description": "This is an example of a request to delete an entity at the /api/orders/4e0e5154-02b8-4967-a97f-bdfd08bb58af endpoint"
+  },
+  "http-response": {
+    "status": 204,
+    "status-text": "No Content",
+    "description": "This is an example of a response confirming deletion of an entity at the /api/orders/4e0e5154-02b8-4967-a97f-bdfd08bb58af endpoint"
+  }
+}

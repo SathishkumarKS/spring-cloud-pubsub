@@ -1,0 +1,10 @@
+overlay: 1.0.0
+actions:
+  - target: $.channels.order-events.publish
+    update:
+      x-specmatic-trigger:
+        command: >
+          curl -s -X POST http://localhost:8090/api/orders
+          -H "Content-Type: application/json"
+          -d '{"customerName":"John Doe","product":"Widget","quantity":2,"price":29.99}'
+        timeout: 'PT5S'
